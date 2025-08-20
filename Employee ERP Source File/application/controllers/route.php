@@ -1,8 +1,28 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * Route Controller
+ * 
+ * Handles application routing, authentication, and session management.
+ * Provides centralized access control for admin and employee dashboards.
+ * 
+ * @package    Employee_ERP
+ * @subpackage Controllers
+ * @category   Controller
+ * @author     Development Team
+ * @version    1.0.0
+ */
 class route extends CI_Controller {
 
+	/**
+	 * Default method - Application entry point
+	 * 
+	 * Checks user session and redirects authenticated users to dashboard
+	 * or shows login page for unauthenticated users
+	 * 
+	 * @return void
+	 */
 	public function index()
 	{
 		$session_array = $this->session->userdata();
@@ -15,6 +35,14 @@ class route extends CI_Controller {
 			$this->load->view('index',['message' => $this->session->flashdata('message')]);		
 		}
 	}
+	
+	/**
+	 * Logout function
+	 * 
+	 * Destroys user session and redirects to login page
+	 * 
+	 * @return void
+	 */
 	public function logout()
 	{
 		$session_array = $this->session->userdata();
@@ -29,6 +57,16 @@ class route extends CI_Controller {
 			redirect('route/index');		
 		}
 	}
+	
+	/**
+	 * Dashboard method
+	 * 
+	 * Role-based dashboard redirect:
+	 * - Admins: Full dashboard with employee and project management
+	 * - Employees: Personal dashboard with assigned projects
+	 * 
+	 * @return void
+	 */
 	public function dashboard()
 	{
 		$session_array = $this->session->userdata();

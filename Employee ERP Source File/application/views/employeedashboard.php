@@ -1,4 +1,23 @@
 <?php
+/**
+ * Employee Dashboard View
+ * 
+ * Personal dashboard for employee users showing their assigned projects,
+ * work history, and form to submit daily work updates.
+ * 
+ * @package    Employee_ERP
+ * @subpackage Views
+ * @author     Development Team
+ * @version    1.0.0
+ * 
+ * Variables available:
+ * @var array $employee_project_array - Employee's projects and work history
+ * @var array $project_id_array - Available project IDs for work updates
+ * @var string $header_value - Page header title
+ * @var string $message - Flash message for user feedback
+ */
+
+	// Form button configurations
 	$resetfielddata = array(
 					'name'			=> 'reset',
 					'value'			=> 'Cancel',
@@ -7,6 +26,8 @@
 			        'name'          => 'submit',
 			        'value'			=> 'Update',
 				);
+				
+	// Display flash messages if available
 	if (isset($message)) 
 	{
 	?>

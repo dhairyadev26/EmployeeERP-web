@@ -1,8 +1,28 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * Admin Controller
+ * 
+ * Handles all administrative functions including employee management,
+ * project management, and transaction processing.
+ * 
+ * @package    Employee_ERP
+ * @subpackage Controllers
+ * @category   Controller
+ * @author     Development Team
+ * @version    1.0.0
+ */
 class admin extends CI_Controller {
 
+	/**
+	 * Default method - handles admin login
+	 * 
+	 * Checks if admin is already logged in and redirects to dashboard,
+	 * otherwise processes login form submission
+	 * 
+	 * @return void
+	 */
 	public function index()
 	{
 		$session_array = $this->session->userdata();

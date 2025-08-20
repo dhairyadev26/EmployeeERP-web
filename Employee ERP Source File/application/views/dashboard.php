@@ -1,4 +1,23 @@
 <?php 
+/**
+ * Admin Dashboard View
+ * 
+ * Main administrative interface showing employee and project management tables.
+ * Provides switching between employee list and project list views.
+ * Includes action buttons for adding, editing, and viewing details.
+ * 
+ * @package    Employee_ERP
+ * @subpackage Views
+ * @author     Development Team
+ * @version    1.0.0
+ * 
+ * Variables available:
+ * @var array $employee_array - List of all employees
+ * @var array $project_array - List of all projects  
+ * @var string $message - Flash message for user feedback
+ */
+
+	// Display flash messages if available
 	if (isset($message)) 
 	{
 	?>

@@ -1,7 +1,29 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+
+/**
+ * Employee Model
+ * 
+ * Handles all database operations related to employee functions including
+ * project assignments, work updates, and project tracking.
+ * 
+ * @package    Employee_ERP
+ * @subpackage Models
+ * @category   Model
+ * @author     Development Team
+ * @version    1.0.0
+ */
 class employee_model extends CI_Model
 {
+	/**
+	 * Fetch employee projects with work history
+	 * 
+	 * Retrieves all projects assigned to a specific employee along with
+	 * their work update history and project details.
+	 * 
+	 * @param string $value Employee ID
+	 * @return object Database query result with joined project and work data
+	 */
 	public function fetch_project($value)
 	{
 		$data=array(
@@ -15,6 +37,14 @@ class employee_model extends CI_Model
 		                 ->get();
 		return $result;
 	}
+	
+	/**
+	 * Fetch all active project IDs
+	 * 
+	 * Returns a list of all active project IDs for dropdown/selection purposes
+	 * 
+	 * @return object Database query result with project IDs
+	 */
 	public function fetch_project_id()
 	{
 		$data=array(
@@ -25,6 +55,18 @@ class employee_model extends CI_Model
 						 ->get('project_details');
 		return $result;
 	}
+	
+	/**
+	 * Add work update for employee
+	 * 
+	 * Records daily work updates submitted by employees for their assigned projects
+	 * 
+	 * @param array $value Work update data from form
+	 * @param string $employee_id Employee identifier
+	 * @param string $employee_first_name Employee's first name
+	 * @param string $employee_last_name Employee's last name
+	 * @return object Database insertion result
+	 */
 	public function addwork($value,$employee_id,$employee_first_name,$employee_last_name)
 	{
 		date_default_timezone_set('Asia/Kolkata');

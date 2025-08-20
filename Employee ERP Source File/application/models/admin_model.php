@@ -1,7 +1,28 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+
+/**
+ * Admin Model
+ * 
+ * Handles all database operations for administrative functions including
+ * employee management, project management, authentication, and reporting.
+ * 
+ * @package    Employee_ERP
+ * @subpackage Models
+ * @category   Model
+ * @author     Development Team
+ * @version    1.0.0
+ */
 class admin_model extends CI_Model
 {
+	/**
+	 * User login authentication
+	 * 
+	 * Validates user credentials against the database
+	 * 
+	 * @param array $value Contains login credentials (role, email, password)
+	 * @return object Database query result
+	 */
 	public function login($value)
 	{
 		$data = array(
@@ -14,6 +35,16 @@ class admin_model extends CI_Model
 				 		 ->get('employee_details');
 		return $result;		
 	}
+	
+	/**
+	 * Fetch employee data
+	 * 
+	 * Retrieves employee information from database.
+	 * Can fetch specific employee or all employees.
+	 * 
+	 * @param string $value Optional employee ID for specific employee
+	 * @return object Database query result
+	 */
 	public function fetch_employee($value='')
 	{
 		if($value)

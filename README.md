@@ -115,18 +115,25 @@ EmployeeERP-web/
 ## 🖼️ Application Screenshots
 
 ### Admin Interface
-![Admin Dashboard](SnapShot/AdminDashboard.png)
-![Add Employee](SnapShot/AddEmployee.png)
-![Add Project](SnapShot/AddProject.png)
-![View Project History](SnapShot/ViewProjectHistroy.png)
+![Admin Dashboard]<img width="1452" height="602" alt="Screenshot (311)" src="https://github.com/user-attachments/assets/0f3d9448-e96d-4084-bcfe-f15a26414324" />
+
+![Add Employee]<img width="1446" height="628" alt="Screenshot (312)" src="https://github.com/user-attachments/assets/0d383400-cd65-429c-bae9-4b23cd09e631" />
+
+![Add Project]<img width="1437" height="616" alt="Screenshot (313)" src="https://github.com/user-attachments/assets/c4083a45-8f52-4561-8f20-49bdab4c2c36" />
+
+![View Project History]<img width="1440" height="611" alt="Screenshot (314)" src="https://github.com/user-attachments/assets/7a0d8d38-388b-449d-97bd-cf03b4eb64a0" />
+
 
 ### Employee Interface
-![Employee Dashboard](SnapShot/EmployeeDashboard.png)
-![Add Transaction](SnapShot/AddTransaction.png)
+![Employee Dashboard]<img width="1446" height="628" alt="Screenshot (315)" src="https://github.com/user-attachments/assets/8489be82-6505-4797-91d0-769ec12df738" />
+
+![Add Transaction]<img width="1448" height="625" alt="Screenshot (316)" src="https://github.com/user-attachments/assets/543140ee-d6e3-421f-a6f0-e39fdc1cac91" />
+
 
 ### Reports & Analytics
-![Balance Sheet](SnapShot/ViewBalanceSheet.png)
-![Employee History](SnapShot/ViewEmployeeHistroy.png)
+![Balance Sheet]<img width="1452" height="622" alt="Screenshot (317)" src="https://github.com/user-attachments/assets/afc595e3-2d3f-4ec6-a101-cd7da6778d96" />
+
+![Employee History]<img width="1443" height="618" alt="Screenshot (318)" src="https://github.com/user-attachments/assets/e3043215-49ae-439f-aeaa-46eab3c3c8fc" />
 
 ## 🎥 Demo Video
 
